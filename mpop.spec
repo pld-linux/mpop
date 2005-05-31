@@ -1,13 +1,18 @@
+#
+# Conditional build:
+%bcond_with	gsasl	# with GNU SASL support instead of built-it authentication code
+#
 Summary:	mpop retrieves mails from POP3 mailboxes
 Summary(pl):	mpop - pobieranie listów ze skrzynek POP3
 Name:		mpop
 Version:	0.6.3
-Release:	0.1
+Release:	0.2
 License:	GPL v2
 Group:		Applications/Mail
 Source0:	http://dl.sourceforge.net/mpop/%{name}-%{version}.tar.bz2
 # Source0-md5:	e0cd8d531c0711fec71897da391e8170
 URL:		http://mpop.sourceforge.net/
+%{?with_gsasl:BuildRequires:	gsasl-devel >= 0.2.4}
 BuildRequires:	openssl-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -29,7 +34,9 @@ dobr± obs³ugê TLS/SSL.
 %setup -q
 
 %build
-%configure
+%configure \
+	--%{?with_gsasl:en}%{!?with_gsasl:dis}able-gsasl \
+	--with-ssl=openssl
 %{__make}
 
 %install
