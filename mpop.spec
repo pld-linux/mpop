@@ -13,7 +13,7 @@ Source0:	http://dl.sourceforge.net/mpop/%{name}-%{version}.tar.bz2
 # Source0-md5:	e0cd8d531c0711fec71897da391e8170
 URL:		http://mpop.sourceforge.net/
 %{?with_gsasl:BuildRequires:	gsasl-devel >= 0.2.4}
-BuildRequires:	openssl-devel
+BuildRequires:	openssl-devel >= 0.9.7d
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
