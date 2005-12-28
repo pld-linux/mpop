@@ -11,6 +11,7 @@ License:	GPL v2
 Group:		Applications/Mail
 Source0:	http://dl.sourceforge.net/mpop/%{name}-%{version}.tar.bz2
 # Source0-md5:	906cd16d0ed840ac5e2c75eb5a499832
+Patch0:		%{name}-home_etc.patch
 URL:		http://mpop.sourceforge.net/
 %{?with_gsasl:BuildRequires:	gsasl-devel >= 0.2.4}
 BuildRequires:	openssl-devel >= 0.9.7d
@@ -32,6 +33,7 @@ dobr± obs³ugê TLS/SSL.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure \
