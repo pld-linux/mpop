@@ -1,5 +1,5 @@
 Summary:	mpop retrieves mails from POP3 mailboxes
-Summary(pl):	mpop - pobieranie listów ze skrzynek POP3
+Summary(pl.UTF-8):   mpop - pobieranie listÃ³w ze skrzynek POP3
 Name:		mpop
 Version:	1.0.7
 Release:	1
@@ -20,12 +20,12 @@ delivery to mbox files, maildir folders, or a mail delivery agent, a
 very fast POP3 implementation, many authentication methods, and good
 support for TLS/SSL.
 
-%description -l pl
-mpop to ma³y, szybki i przeno¶ny klient POP3. Jego mo¿liwo¶ci obejmuj±
-filtrowanie listów w oparciu o nag³ówki (filtrowanie niechcianej
-poczty przed jej ¶ci±gniêciem), dostarczanie do plików mbox albo MDA,
-bardzo szybk± implementacjê POP3, wiele metod uwierzytelniania oraz
-dobr± obs³ugê TLS/SSL.
+%description -l pl.UTF-8
+mpop to maÅ‚y, szybki i przenoÅ›ny klient POP3. Jego moÅ¼liwoÅ›ci obejmujÄ…
+filtrowanie listÃ³w w oparciu o nagÅ‚Ã³wki (filtrowanie niechcianej
+poczty przed jej Å›ciÄ…gniÄ™ciem), dostarczanie do plikÃ³w mbox albo MDA,
+bardzo szybkÄ… implementacjÄ™ POP3, wiele metod uwierzytelniania oraz
+dobrÄ… obsÅ‚ugÄ™ TLS/SSL.
 
 %prep
 %setup -q
