@@ -1,5 +1,5 @@
 Summary:	mpop retrieves mails from POP3 mailboxes
-Summary(pl.UTF-8):   mpop - pobieranie listów ze skrzynek POP3
+Summary(pl.UTF-8):	mpop - pobieranie listów ze skrzynek POP3
 Name:		mpop
 Version:	1.0.7
 Release:	1
