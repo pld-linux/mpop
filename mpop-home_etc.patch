@@ -1,13 +1,13 @@
---- mpop-1.0.1/src/tools.c.orig	2006-07-04 08:38:27.000000000 +0200
-+++ mpop-1.0.1/src/tools.c	2006-08-04 23:14:09.535791750 +0200
-@@ -269,7 +269,9 @@
+--- mpop-1.0.20/src/tools.c.orig	2010-02-07 11:28:19.000000000 +0100
++++ mpop-1.0.20/src/tools.c	2010-03-22 22:51:57.000000000 +0100
+@@ -266,7 +266,9 @@
      char *home;
      struct passwd *pw;
-     
+ 
 -    if ((home = getenv("HOME")))
-+    home = getenv("HOME_ETC");
-+    if (home == NULL) home = getenv("HOME");
-+    if (home != NULL)
++    if ((home = getenv("HOME_ETC")) == NULL)
++        home = getenv("HOME");
++    if (home)
      {
- 	home = xstrdup(home);
+         home = xstrdup(home);
      }
