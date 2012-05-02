@@ -5,7 +5,7 @@ Version:	1.0.27
 Release:	1
 License:	GPL v3
 Group:		Applications/Mail
-Source0:	http://dl.sourceforge.net/mpop/%{name}-%{version}.tar.bz2
+Source0:	http://downloads.sourceforge.net/mpop/%{name}-%{version}.tar.bz2
 # Source0-md5:	3d040389e77ce2ef1fe6af2b1b805b3a
 Patch0:		%{name}-home_etc.patch
 URL:		http://mpop.sourceforge.net/
