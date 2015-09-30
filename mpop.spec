@@ -1,12 +1,12 @@
 Summary:	mpop retrieves mails from POP3 mailboxes
 Summary(pl.UTF-8):	mpop - pobieranie listów ze skrzynek POP3
 Name:		mpop
-Version:	1.0.27
+Version:	1.0.29
 Release:	1
 License:	GPL v3
 Group:		Applications/Mail
 Source0:	http://downloads.sourceforge.net/mpop/%{name}-%{version}.tar.bz2
-# Source0-md5:	3d040389e77ce2ef1fe6af2b1b805b3a
+# Source0-md5:	468a145812123524b8ebc57f12ec4405
 Patch0:		%{name}-home_etc.patch
 URL:		http://mpop.sourceforge.net/
 BuildRequires:	gnutls-devel >= 1.2.0
