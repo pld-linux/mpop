@@ -18,6 +18,7 @@ BuildRequires:	gsasl-devel
 BuildRequires:	libsecret-devel
 BuildRequires:	pkgconfig
 BuildRequires:	tar >= 1:1.22
+BuildRequires:	texinfo
 BuildRequires:	xz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
