@@ -1,17 +1,24 @@
 Summary:	mpop retrieves mails from POP3 mailboxes
 Summary(pl.UTF-8):	mpop - pobieranie listów ze skrzynek POP3
 Name:		mpop
-Version:	1.2.2
-Release:	2
+Version:	1.4.16
+Release:	1
 License:	GPL v3
 Group:		Applications/Mail
-Source0:	http://downloads.sourceforge.net/mpop/%{name}-%{version}.tar.xz
-# Source0-md5:	4ff3088fcbc94c70c66d6002435bfe9c
+#Source0Download: https://marlam.de/mpop/download/
+Source0:	https://marlam.de/mpop/releases/%{name}-%{version}.tar.xz
+# Source0-md5:	95ef54a80cc612e05f2ad57da0030b68
 Patch0:		%{name}-home_etc.patch
-URL:		http://mpop.sourceforge.net/
-BuildRequires:	gnutls-devel >= 1.2.0
+Patch1:		%{name}-info.patch
+URL:		https://marlam.de/mpop/
+BuildRequires:	gettext-tools
+# also openssl or libtls possible
+BuildRequires:	gnutls-devel >= 3.4
 BuildRequires:	gsasl-devel
+BuildRequires:	libsecret-devel
 BuildRequires:	pkgconfig
+BuildRequires:	tar >= 1:1.22
+BuildRequires:	xz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -31,9 +38,11 @@ dobrą obsługę TLS/SSL.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
-%configure
+%configure \
+	--disable-silent-rules
 %{__make}
 
 %install
@@ -56,6 +65,8 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS NOTES README THANKS doc/mpoprc.example
-%attr(755,root,root) %{_bindir}/*
-%{_infodir}/*.info*
-%{_mandir}/man1/*
+%attr(755,root,root) %{_bindir}/mpop
+%attr(755,root,root) %{_bindir}/mpopd
+%{_infodir}/mpop.info*
+%{_mandir}/man1/mpop.1*
+%{_mandir}/man1/mpopd.1*

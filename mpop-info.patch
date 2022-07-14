@@ -1,0 +1,14 @@
+--- mpop-1.4.16/doc/mpop.texi.orig	2021-10-04 20:04:23.000000000 +0200
++++ mpop-1.4.16/doc/mpop.texi	2022-07-14 19:53:39.325702160 +0200
+@@ -24,9 +24,9 @@ notice are preserved. These files are of
+ @end quotation
+ @end copying
+ 
+-@dircategory Individual utilities
++@dircategory Net utilities:
+ @direntry
+-* mpop: (mpop).		A POP3 client.
++* mpop: (mpop).				A POP3 client
+ @end direntry
+ 
+ @titlepage
